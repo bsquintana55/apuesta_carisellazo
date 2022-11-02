@@ -24,8 +24,18 @@ iniciar.addEventListener("click", () => {
 jugar.addEventListener("click", () => {
 
     
- 
+    let nombre = document.getElementById('nombre').value;
+    let dinero = document.getElementById('dinero').value;
+    let opcion = document.getElementById('opcion').value;
    
+    let suma = 0,
+        contador = 0, 
+        random;
+
+    random = Math.floor(Math.random() * 2) + 1;
+    random=parseInt(random)
+    opcion = parseInt(opcion)
+
 
 })
 
