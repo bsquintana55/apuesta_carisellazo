@@ -20,3 +20,21 @@ iniciar.addEventListener("click", () => {
     seguir.style.display = "none"
 })
 
+
+jugar.addEventListener("click", () => {
+
+    
+ 
+   
+
+})
+
+
+
+let irme = document.getElementById(irme)
+
+irme.addEventListener("click", () => {
+
+   
+
+})
