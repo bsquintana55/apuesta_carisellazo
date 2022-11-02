@@ -36,6 +36,65 @@ jugar.addEventListener("click", () => {
     random=parseInt(random)
     opcion = parseInt(opcion)
 
+    if (opcion==1 && opcion == random) {
+        contador = contador + 1;
+        suma = apuesta + apuesta; 
+
+        swal.fire({
+            title: 'Has Ganadooo, ¡la suerte esta con la cara!'
+        }
+          ` ${nombre} tu dinero es de ${dinero}`
+          `y has jugado ${contador}`
+            
+        );
+        
+    }
+
+    else if (opcion==2 && opcion == random) {
+
+        contador = contador + 1;
+        suma = apuesta + 100;
+
+        swal.fire({
+            title: 'Has Ganadooo, ¡la suerte esta con el sello!'
+        }
+          ` ${nombre} tu dinero es de ${dinero}`
+          `y has jugado ${contador}`
+            
+        );
+
+    }
+    else if (opcion==1 && opcion !== random) {
+        
+        contador = contador + 1;
+        suma = apuesta - apuesta;
+        swal.fire({
+            title: 'Lo sentimos, has perdio... Cara no era'
+        }
+          ` ${nombre} tu dinero es de ${dinero}`
+          `y has jugado ${contador}`
+            
+        );
+
+    }
+    else if (opcion==2 && opcion !== random) {
+       
+        contador = contador + 1;
+        suma = apuesta - 100;
+
+    }
+    swal.fire({
+        title: 'Lo sentimos, has perdio... Sello no era'
+    }
+      ` ${nombre} tu dinero es de ${dinero}`
+      `y has jugado ${contador}`
+        
+    );
+    
+    jugar.style.display = "none";
+    iniciar.style.display = "none";
+    seguir.style.display = "block";
+   
 
 })
 
