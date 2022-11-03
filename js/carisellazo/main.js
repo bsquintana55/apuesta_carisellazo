@@ -21,6 +21,8 @@
                 todo.style.display = "block"
                 iniciar.style.display = "none"
                 jugar.style.display = "block"
+
+              
                 
             })
 
@@ -45,6 +47,7 @@
     opcion = parseInt(opcion)
     let dinero = document.getElementById('dinero').value;
             dinero=parseInt(dinero)
+
         random = Math.floor(Math.random() * 2) + 1;
         random=parseInt(random)
         console.log(random)
@@ -54,10 +57,17 @@
             // req 5
             suma = suma+(dinero*dinero) ;
 
-            alert( 
-            ` ${nombre} tu dinero es de ${suma} y has jugado ${cont} veces`
-            );
-           
+          //  Swal.fire(
+            //` ${nombre} tu dinero es de ${suma} y has jugado ${cont} veces`
+           // );
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Muy Bien... Cara era',
+                text: '¡has ganado '+nombre+' en este momento tienes '+suma+' dolares',
+                footer: 'vas '+cont+' partidas'
+              })
+
         }
 
         else if (opcion==2 && opcion == random) {
@@ -66,13 +76,12 @@
             // req 5
             suma = suma+(dinero*dinero) ;
 
-            alert(`${nombre} tu dinero es de ${suma}, 
-            y has jugado ${cont} veces y sello `
-
-            //` ${nombre} tu dinero es de ${dinero}`
-            //`y has jugado ${cont} veces y sello`
-                
-            );
+            Swal.fire({
+                icon: 'success',
+                title: 'Muy Bien... Sello era',
+                text: '¡has ganado '+nombre+' en este momento tienes '+suma+' dolares',
+                footer: 'vas '+cont+' partidas'
+              })
 
         }
         else if (opcion !== random) {
@@ -81,10 +90,12 @@
             //req 6
             suma = suma - (dinero*dinero);
 
-        alert(
-            `perdiste ${nombre} tu dinero es de ${suma} y has jugado ${cont} veces`
-                
-            );
+            Swal.fire({
+                icon: 'warning',
+                title: '¡¡Rayoooss!!',
+                text: '¡has perdido esta vez '+nombre+' en este momento tienes '+suma+' dolares',
+                footer: 'vas '+cont+' partidas'
+              })
 
         }
         
@@ -92,18 +103,32 @@
         jugar.style.display = "block";
         iniciar.style.display = "none";
         irme.style.display = "block";
+
+          //req 8 
+         
     
 
     })
 
 
-    //req 8 
+    
     irme.addEventListener("click", () => {
-        alert({
-                title: 'Has terminado tu apuesta'
-            }
-            ` ${nombre} tu dinero total es de ${suma}`
-            `y has jugado ${cont} veces`
-                
-            ); 
+        //info
+        
+        /*  Swal.fire({
+                icon: 'info',
+                title: '¡Has terminado!',
+                text: '¡'+nombre+' en este momento tienes '+suma+' dolares',
+                text: 'espero que volvamos a jugar :)',
+                footer: 'jugaste '+cont+' partidas',
+                showConfirmButton: false,
+                timer: 3000
+            })*/
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
     })
