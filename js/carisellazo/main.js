@@ -2,7 +2,8 @@
     //botones
     let jugar = document.getElementById("jugar")
     let iniciar = document.getElementById("iniciar")
-
+    let irme = document.getElementById("irme")
+    let info = document.getElementById("info")
     //recursos 
     let moneda = document.getElementById("moneda")
     let mano = document.getElementById("mano")
@@ -13,6 +14,7 @@
             todo.style.display = "none"
             moneda.style.display = "block"
             mano.style.display = "none"
+            info.style.display = "none"
 
             //visibilidad para juego y req 1
             iniciar.addEventListener("click", () => {
@@ -21,6 +23,7 @@
                 todo.style.display = "block"
                 iniciar.style.display = "none"
                 jugar.style.display = "block"
+                info.style.display = "block"
 
               
                 
@@ -106,16 +109,10 @@
 
           //req 8 
          
+          info.addEventListener("click", () => {
+            //info
     
-
-    })
-
-
-    
-    irme.addEventListener("click", () => {
-        //info
-        
-        /*  Swal.fire({
+              Swal.fire({
                 icon: 'info',
                 title: '¡Has terminado!',
                 text: '¡'+nombre+' en este momento tienes '+suma+' dolares',
@@ -123,18 +120,40 @@
                 footer: 'jugaste '+cont+' partidas',
                 showConfirmButton: false,
                 timer: 3000
-            })*/
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Your work has been saved',
-                showConfirmButton: false,
-                timer: 1500
+    
             })
+            .then((result) => {
+                window.location.href = "./index.html";
+          })
+    
+        })
+
     })
 
 
- /*    irme.addEventListener("click", () => {
+  
+
+ /*    
+    info.addEventListener("click", () => {
+        //info
+
+          Swal.fire({
+            icon: 'info',
+            title: '¡Has terminado!',
+            text: '¡'+nombre+' en este momento tienes '+suma+' dolares',
+            text: 'espero que volvamos a jugar :)',
+            footer: 'jugaste '+cont+' partidas',
+            showConfirmButton: false,
+            timer: 3000
+
+        })
+        .then((result) => {
+            window.location.href = "./index.html";
+      })
+
+    })
+
+    irme.addEventListener("click", () => {
         //info
         
          Swal.fire({
@@ -147,4 +166,31 @@
                 timer: 3000
             })
            
-    })*/
+    })*/        
+        /*  Swal.fire({
+                icon: 'info',
+                title: '¡Has terminado!',
+                text: '¡'+nombre+' en este momento tienes '+suma+' dolares',
+                text: 'espero que volvamos a jugar :)',
+                footer: 'jugaste '+cont+' partidas',
+                showConfirmButton: false,
+                timer: 3000
+
+            })
+            
+            
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            .then((result) => {
+
+                window.location.href = "./index.html";
+        
+          })
+            
+            
+            */
