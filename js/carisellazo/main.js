@@ -132,3 +132,19 @@
                 timer: 1500
             })
     })
+
+
+ /*    irme.addEventListener("click", () => {
+        //info
+        
+         Swal.fire({
+                icon: 'info',
+                title: '¡Has terminado!',
+                text: '¡'+nombre+' en este momento tienes '+suma+' dolares',
+                text: 'espero que volvamos a jugar :)',
+                footer: 'jugaste '+cont+' partidas',
+                showConfirmButton: false,
+                timer: 3000
+            })
+           
+    })*/
