@@ -79,7 +79,7 @@
         
             cont = cont + 1;
             //req 6
-            suma = suma - 100;
+            suma = suma - (dinero*dinero);
 
         alert(
             `perdiste ${nombre} tu dinero es de ${suma} y has jugado ${cont} veces`
