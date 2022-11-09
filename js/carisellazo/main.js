@@ -110,13 +110,14 @@
           //req 8 
          
           info.addEventListener("click", () => {
+            let nombre = document.getElementById('nombre').value;
             //info
-    
+            sumatotal=suma
+            if (sumatotal < 10) {
               Swal.fire({
                 icon: 'info',
                 title: '¡Has terminado!',
-                text: '¡'+nombre+' en este momento tienes '+suma+' dolares',
-                text: 'espero que volvamos a jugar :)',
+                text: '¡'+nombre+' en este momento debes '+sumatotal+' dolares!',
                 footer: 'jugaste '+cont+' partidas',
                 showConfirmButton: false,
                 timer: 3000
@@ -125,6 +126,21 @@
             .then((result) => {
                 window.location.href = "./index.html";
           })
+            } else {
+              Swal.fire({
+                icon: 'info',
+                title: '¡Has terminado!',
+                text: '¡'+nombre+' en este momento tienes '+sumatotal+' dolares!',
+                footer: 'jugaste '+cont+' partidas',
+                showConfirmButton: false,
+                timer: 3000
+    
+            })
+            .then((result) => {
+                window.location.href = "./index.html";
+          })
+            }
+             
     
         })
 
